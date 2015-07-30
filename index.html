@@ -1,10 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+
+<html>
+
 <head>
-	<meta charset="UTF-8">
-	<title>Zone FOC</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Twisten (Turning twitter into music)</title>
+	<script src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$(".randomize").click(function(){
+
+		var message = "Voila! ";
+		// var messagevalue = message.length
+		var messagevalue=Math.floor((Math.random() *140) +1);
+		var note;
+		var notesource;
+		var audio;
+
+		if ( ( messagevalue < 46) && ( messagevalue >0 ) ){
+			note="a";
+			notesource="assets/marimba/a-3.WAV";
+		}
+
+		else if ( (messagevalue < 88 )&&(messagevalue > 45) ) {
+			note="b";
+			notesource="assets/marimba/b-3.WAV";
+		}
+
+		else if ( (messagevalue < 136 )&&(messagevalue > 87) ) {
+		note="c";
+		notesource="assets/marimba/c-3.WAV";
+		}
+
+		else if ( (messagevalue <141 )&&(messagevalue > 135) ) {
+			note="d";
+			notesource="assets/marimba/d-3.WAV";
+		}
+
+		$(".tweetspace").append("<li>" + message + messagevalue + " <- how long the string is " + note + " <- what note it is" + "</li>");
+
+		audio = document.createElement("audio");
+		audio.setAttribute("src",notesource);
+		audio.setAttribute("autoplay","autoplay");
+
+
+	});
+});
+</script>
+
 </head>
+
 <body>
-	<h1>Zone FOC</h1>
+
+	<h1>
+		Twisten
+	</h1>
+	<p>
+		we are building a web app that connects to twitter's streaming API and generates a single note for every use of a certain #
+	</p>
+	<button class="randomize">Randomize</button>
+	<ul  class="tweetspace">
+
+	</ul>
+
+
+
 </body>
+
 </html>
