@@ -19,22 +19,22 @@
 
 		if ( ( messagevalue < 46) && ( messagevalue >0 ) ){
 			note="a";
-			notesource="assets/marimba/a-3.WAV";
+			notesource="assets/marimba/a-3.wav";
 		}
 
 		else if ( (messagevalue < 88 )&&(messagevalue > 45) ) {
 			note="b";
-			notesource="assets/marimba/b-3.WAV";
+			notesource="assets/marimba/b-3.wav";
 		}
 
 		else if ( (messagevalue < 136 )&&(messagevalue > 87) ) {
 		note="c";
-		notesource="assets/marimba/c-3.WAV";
+		notesource="assets/marimba/c-3.wav";
 		}
 
 		else if ( (messagevalue <141 )&&(messagevalue > 135) ) {
 			note="d";
-			notesource="assets/marimba/d-3.WAV";
+			notesource="assets/marimba/d-3.wav";
 		}
 
 		$(".tweetspace").append("<li>" + message + messagevalue + " <- how long the string is " + note + " <- what note it is" + "</li>");
