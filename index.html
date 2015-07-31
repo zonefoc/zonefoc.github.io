@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="en">
+<html>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,44 +9,110 @@
   <script type="text/javascript">
 	$(document).ready(function(){
 		$(".randomize").click(function(){
-
-		var message = "Voila! ";
-		// var messagevalue = message.length
+	 	var message = "second build !";
+	// var messagevalue = message.length
 		var messagevalue=Math.floor((Math.random() *140) +1);
 		var note;
 		var notesource;
 		var audio;
 
-		if ( ( messagevalue < 46) && ( messagevalue >0 ) ){
-			note="a";
-			notesource="assets/marimba/a-3.wav";
-		}
-
-		else if ( (messagevalue < 88 )&&(messagevalue > 45) ) {
-			note="b";
-			notesource="assets/marimba/b-3.wav";
-		}
-
-		else if ( (messagevalue < 136 )&&(messagevalue > 87) ) {
-		note="c";
+		if ( ( messagevalue <7 ) && ( messagevalue >0 ) ){
+		note="a1"
+		notesource="assets/marimba/a-2.wav";
+	}
+		else if ( (messagevalue < 14) && (messagevalue > 6) ) {
+		note="b1"
+		notesource="assets/marimba/b-2.wav";
+	}
+		else if ( (messagevalue < 20 )&&(messagevalue > 13) ) {
+	  note="c1"
+		notesource="assets/marimba/c-2.wav";
+	}
+		else if ( (messagevalue < 27 )&&(messagevalue > 19) ) {
+		note="d1"
+		notesource="assets/marimba/d-2.wav";
+	}
+		else if ( (messagevalue < 32 )&&(messagevalue > 24) ) {
+		note="e1"
+		notesource="assets/marimba/e-2.wav";
+	}
+		else if ( (messagevalue < 39 )&&(messagevalue > 31) ) {
+		note="f1"
+		notesource="assets/marimba/f-2.wav";
+	}
+		else if ( (messagevalue < 46 )&&(messagevalue > 38) ) {
+		note="g1"
+		notesource="assets/marimba/g-2.wav";
+	}
+		else if ( (messagevalue < 53 )&&(messagevalue > 45) ) {
+		note="a2"
+		notesource="assets/marimba/a-3.wav";
+	}
+	else if ( (messagevalue < 60) && (messagevalue > 52) ) {
+		note="b2"
+		notesource="assets/marimba/b-3.wav";
+	}
+	else if ( (messagevalue < 67 )&&(messagevalue > 59) ) {
+		note="c2"
 		notesource="assets/marimba/c-3.wav";
-		}
+	}
+	else if ( (messagevalue <74)&&(messagevalue > 66) ) {
+		note="d2"
+		notesource="assets/marimba/d-3.wav";
+	}
+	else if ( (messagevalue < 81 )&&(messagevalue > 73) ) {
+		note="e2"
+		notesource="assets/marimba/e-3.wav";
+	}
+	else if ( (messagevalue < 88 )&&(messagevalue > 80) ) {
+		note="f2"
+		notesource="assets/marimba/f-3.wav";
+	}
+	else if ( (messagevalue < 105 )&&(messagevalue > 87) ) {
+		note="g2"
+		notesource="assets/marimba/g-3.wav";
+	}
+	else if ( (messagevalue < 112 )&&(messagevalue > 104) ) {
+		note="a3"
+		notesource="assets/marimba/a-4.wav";
+	}
+	else if ( (messagevalue < 117) && (messagevalue > 111) ) {
+		note="b3"
+		notesource="assets/marimba/b-4.wav";
+	}
+	else if ( (messagevalue < 124 )&&(messagevalue > 116) ) {
+		note="c3"
+		notesource="assets/marimba/c-4.wav";
+	}
+	else if ( (messagevalue <131)&&(messagevalue > 123) ) {
+		note="d3"
+		notesource="assets/marimba/d-4.wav";
+	}
+	else if ( (messagevalue < 138)&&(messagevalue >130) ) {
+		note="e3"
+		notesource="assets/marimba/e-4.wav";
+	}
+	else if ( (messagevalue <141 )&&(messagevalue > 137) ) {
+		note="f3"
+		notesource="assets/marimba/f-4.wav";
+	}
 
-		else if ( (messagevalue <141 )&&(messagevalue > 135) ) {
-			note="d";
-			notesource="assets/marimba/d-3.wav";
-		}
+	else console.log (messagevalue,"This number is to big/small please try again with a smaller/bigger number")
 
-		$(".tweetspace").append("<li>" + message + messagevalue + " <- how long the string is " + note + " <- what note it is" + "</li>");
+	$(".tweetspace").append("<li>" + message + messagevalue + " <- how long the string is " + note + " <- what note it is" + "</li>");
 
-		audio = document.createElement("audio");
-		audio.setAttribute("src",notesource);
-		audio.setAttribute("autoplay","autoplay");
+	audio = document.createElement("audio");
+	audio.setAttribute("src",notesource);
+	audio.setAttribute("autoplay","autoplay");
 
 
+
+
+
+		//a1 0-6,b1 7-13,c1 14-19,d1 20-26,e1 25-31,f1 32-38,g1 39-45,a2 46-52,b2 53-59,c2 60-66,d2 67-73, e2 74-80, f2 81-87,g2 88-94,a3 95-101,b3 102-108,c3 109-115,d3 116-122,e3 123-129,f3 130-136,g3 137-140,
+	 });
 	});
-});
-</script>
+  </script>
 
 </head>
 
@@ -62,7 +128,6 @@
 	<ul  class="tweetspace">
 
 	</ul>
-
 
 </body>
 
